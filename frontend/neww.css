@@ -1,0 +1,408 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Popup Background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Popup Content */
+  .popup-content {
+    background-color:#afebf2;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+  
+  button[type="submit"] {
+    
+    width: 100%;
+    padding: 10px;
+    color:white;
+    background-color:#007b78;
+  }
+  
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white; /* Navbar background color */
+    color: #0bb8bb;
+    height: 80px;
+}
+
+/* Logo Image Styling */
+.logo img {
+    max-width: 100%;
+    height: 80px;;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 150px;
+}
+
+.nav-links li a {
+    color:#1b5f60;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Login and Sign Up Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Login Button Styling */
+#loginButton {
+   display : inline-block;
+  padding: 20px 40px;
+  background-color:#007b78; /* Background color */
+  color: white; /* Text color */
+  border: 2px solid #007b78 ; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  transition: all 0.3s ease; /* Transition for smooth effect */
+}
+
+.login-btn:hover {
+    background-color: #16e4e0;
+}
+
+/* Sign Up Button Styling */
+.signup-btn {
+    background-color: #007b78; /* Blue color for Sign Up */
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color:#25e3e0;
+}
+
+/* Make Navbar Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display:inline; /* Hide links on smaller screens */
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 80px; /* Adjust logo size for smaller screens */
+    }
+}
+#myVideo {
+    width: 100%;; /* Make the video responsive, adjust to container's width */
+    height: 800px;; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the video fills its container without distortion */
+    position: relative;
+    z-index: -1;
+}
+.overlay-text {
+    position: absolute; /* Position absolutely within the container */
+    top: 50%; /* Center vertically */
+    left: 40%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for text width and height */
+    color: white; /* Text color */
+        text-align:left; /* left text */
+    font-size: 50px; /* Font size */
+    
+}
+.line2{
+    color: #0bb8bb;
+    text-align: center;
+   
+    height: 60px;
+font-size: 25px;
+}
+.container {
+    height: 400px;
+    display: flex;
+    gap: 70px; /* Spacing between boxes */
+    justify-content: center; /* Center align boxes horizontally */
+    
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 300px; /* Adjust as needed */
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #0bb8bb;
+  }
+  
+  .box img {
+    width: 100%; /* Adjust to fit box */
+    height: auto;
+    border-radius: 3px;
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+/* Add space around the entire webpage */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+#Button{
+    padding: 20px 40px;
+    background-color:#007b78; /* Background color */
+    color: white; /* Text color */
+    border: 2px solid #007b78 ; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    transition: all 0.3s ease; /* Transition for smooth effect */
+   
+}
+
+#div3{
+    height:300px;
+    background-color: rgb(224, 224, 224);
+    color: black;
+}
+h2{
+    color: #007b78;
+        padding-bottom: 40px; /* Adds 20px space inside the h1 at the bottom */
+    line-height:2;
+    text-align: center;
+
+}
+#p2{
+    font-size: 25px;
+    text-align: center;
+
+}
+footer{
+    color: #007b78;
+    text-align: center;
+    font-size: 28px;
+}
+#boxheading{
+    color: white;
+        padding-bottom: 40px; /* Adds 20px space inside the h1 at the bottom */
+    line-height:2;
+    text-align: center;
+
+
+}
+.loginButton{
+        display : inline-block;
+       padding: 20px 20px;
+       background-color:#007b78; /* Background color */
+       color: white; /* Text color */
+       border: 2px solid #007b78 ; /* Border color */
+       border-radius: 8px; /* Rounded corners */
+       font-size: 16px;
+       font-weight: bold;
+       text-align: center;
+       text-decoration: none;
+       cursor: pointer;
+       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+       transition: all 0.3s ease; /* Transition for smooth effect */
+     }
+.loginButton:hover {
+    background-color: #000000;
+}
+.boxx{
+    flex: 1;
+    background-color:#007b78; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+/* .boxx:nth-child(1) {
+    background-color: #0056b3;
+} */
+.btn{
+    color: white;
+    background-color:#007b78; /* Background color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* .btn:hover {
+    background-color: #f0f0f0;
+} */
+/* Popup form styling */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color:#afebf2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px 40px 20px 20px;
+}
+.popup-form h2 {
+    margin-top: 0;
+}
+.popup-form input,
+.popup-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup-form .btn-close {
+    color: white;
+    background-color:#007b78; /* Background color */
+    margin-top: 10px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+} 
+.box1 {
+    flex: 1;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007b78;
+    border-radius: 10px;
+    position: relative;
+}
+.box1:nth-child(1) {
+    background-color: #0056b3;
+}
+.btn1 {
+
+    background-color: #007b78;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Popup form styling */
+.popup-form1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+}
+.popup-form1 h2 {
+    margin-top: 0;
+}
+.popup-form1 input,
+.popup-form1 select,
+.popup-form1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.popup-form1 textarea {
+    resize: vertical;
+}
+.popup-form1 .btn-close1 {
+    background-color: #007b78;
+    margin-top: 10px;
+}
+.overlay1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}

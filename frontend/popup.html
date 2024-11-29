@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Session Popup</title>
+    <style>
+        /* Basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            width: 60%;
+            height: 60%;
+            gap: 10px;
+        }
+        .box1 {
+            flex: 1;
+            background-color: #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #007b78;
+            border-radius: 10px;
+            position: relative;
+        }
+        .box1:nth-child(1) {
+            background-color: #0056b3;
+        }
+        .btn1 {
+
+            background-color: #007b78;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* Popup form styling */
+        .popup-form1 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 20px;
+        }
+        .popup-form1 h2 {
+            margin-top: 0;
+        }
+        .popup-form1 input,
+        .popup-form1 select,
+        .popup-form1 textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .popup-form1 textarea {
+            resize: vertical;
+        }
+        .popup-form1 .btn-close1 {
+            background-color: #007b78;
+            margin-top: 10px;
+        }
+        .overlay1 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- First Container -->
+        <div class="box1">
+            <button class="btn" onclick="openPopup()">Book Your Session</button>
+        </div>
+        <!-- Second Container -->
+        <div class="box1">Second Box</div>
+        <!-- Third Container -->
+        <div class="box1">Third Box</div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay1" id="overlay"></div>
+
+    <!-- Popup Form -->
+    <div class="popup-form1" id="popupForm">
+        <h2>Book Your Session</h2>
+        <form>
+            <input type="text" name="child_name" placeholder="Child Name" required>
+            <input type="text" name="parent_name" placeholder="Parent Name" required>
+            <input type="tel" name="contact_number" placeholder="Child's Contact Number" pattern="[0-9]{10}" required>
+            <input type="tel" name="parent_contact" placeholder="Parent's Contact Number" pattern="[0-9]{10}" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="permanent_address" placeholder="Permanent Address" rows="3" required></textarea>
+            <input type="text" name="class" placeholder="Class (e.g., 5th, 10th)" required>
+            <select name="Subjects" required>
+                <option value="" disabled selected>Subjects</option>
+                <option value="All">All</option>
+                <option value="Maths">Maths</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Science">Science</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+            <input type="number" name="age" placeholder="Your Age" min="1" required>
+            <select name="your_gender" required>
+                <option value="" disabled selected>Your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <select name="teacher_gender" required>
+                <option value="" disabled selected>Teacher's Preferred Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="No Preference">No Preference</option>
+            </select>
+            <textarea name="requirements" placeholder="Your Requirements" rows="5" required></textarea>
+            <button type="submit" class="btn1">Submit</button>
+            <button type="button" class="btn1 btn-close1" onclick="closePopup()">Close</button>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function openPopup() {
+            document.getElementById('popupForm').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popupForm').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="neww.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Logo Image -->
+        <div class="logo">
+            <img src="hlh logo.jpg" alt="Logo" width="100" height="50"> <!-- Replace with your logo -->
+        </div>
+        <!-- Navigation Links (optional) -->
+        <ul class="nav-links">
+            <li><a href="neww.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+          
+        </ul>
+<!-- Login Button -->
+<button id="loginButton">Login</button>
+
+        
+    </nav>
+    <nav class="min1">
+        <video id="myvideo" autoplay muted loop>
+            <source src="PSA clip.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text"><H1>Welcome to the </H1>
+            <h1>HOME LEARNING HUB</h1>
+           <P> Find the best tutors for your needs.</P></div>
+    </div>
+    </nav>
+    <div class="line2">
+        <h2 id="secondheading">How can we help?</h2></div>
+        <br>
+        <div class="container">
+            <div class="box" onclick="boxClick()">
+              <img src="become teacher.jpg" alt="Image 1">
+              <h2 id="boxheading"><br>Become a Teacher</h2><br>
+              <div class="boxx">
+                <button class="btn" onclick="openPopup()">Register as Teacher</button>
+            </div>
+            </div>
+            <div class="box" onclick="boxClick()">
+              <img src="demo session.png" alt="Image 2">
+              <h2 id="boxheading"><br>Book Your Demo Session</h2>
+              <div class="box1">
+                <button class="btn" onclick="openPopup()">Book Your Session</button>
+              </div>
+            </div>
+            <div class="box" onclick="boxClick()">
+              <img src="feedback.jpg" alt="Image 3">
+              <h2 id="boxheading"><br>Give Us Your Valuble Feedback</h2>
+            </div>
+          </div>    
+          <br>
+               <div id="div3">
+            <h2 id="lastheaging">Let's Socialize</h2>
+            <p id="p2">Join our community today and connect with like-minded individuals! <br>
+                At Home Learning Hub, we believe learning goes beyond academics. <br>
+                Expand your network, share experiences, and grow together with our supportive family.<br> 
+                Become a part of our vibrant community and unlock endless opportunities for socialization, collaboration, and fun!"
+            </p>
+          </div>
+          <div class="overlay" id="overlay"></div>
+
+    <!-- Popup Form -->
+    <div class="popup-form" id="popupForm">
+        <h2>Teacher Registration</h2>
+        <form>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="stream" required>
+                <option value="" disabled selected>Choose Stream</option>
+                <option value="Science">Science</option>
+                <option value="Maths">Maths</option>
+                <option value="Arts">Arts</option>
+            </select>
+            <input type="file" name="adhaar_card" accept="image/*" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="number" name="age" placeholder="Age" min="18" required>
+            <input type="tel" name="contact_number" placeholder="Contact Number" pattern="[0-9]{10}" required>
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="btn btn-close" onclick="closePopup()">Close</button>
+        </form>
+    </div>
+        
+     <!-- Overlay -->
+     <div class="overlay1" id="overlay1"></div>
+
+     <!-- Popup Form -->
+     <div class="popup-form1" id="popupForm1">
+         <h2>Book Your Session</h2>
+         <form>
+             <input type="text" name="child_name" placeholder="Child Name" required>
+             <input type="text" name="parent_name" placeholder="Parent Name" required>
+             <input type="tel" name="parent_contact" placeholder="Parent's Contact Number" pattern="[0-9]{10}" required>
+             <input type="email" name="email" placeholder="Email" required>
+             <textarea name="permanent_address" placeholder="Permanent Address" rows="3" required></textarea>
+             <input type="text" name="class" placeholder="Class (e.g., 5th, 10th)" required>
+             <select name="Subjects" required>
+                 <option value="" disabled selected>Subjects</option>
+                 <option value="All">All</option>
+                 <option value="Maths">Maths</option>
+                 <option value="Physics">Physics</option>
+                 <option value="Chemistry">Chemistry</option>
+                 <option value="Biology">Biology</option>
+                 <option value="Science">Science</option>
+                 <option value="English">English</option>
+                 <option value="Hindi">Hindi</option>
+             </select>
+             <select name="your_gender" required>
+                 <option value="" disabled selected>Your Gender</option>
+                 <option value="Male">Male</option>
+                 <option value="Female">Female</option>
+                 <option value="Other">Other</option>
+             </select>
+             <select name="teacher_gender" required>
+                 <option value="" disabled selected>Teacher's Preferred Gender</option>
+                 <option value="Male">Male</option>
+                 <option value="Female">Female</option>
+                 <option value="No Preference">No Preference</option>
+             </select>
+             <textarea name="requirements" placeholder="Your Requirements" rows="5" required></textarea>
+             <button type="submit" class="btn1">Submit</button>
+             <button type="button" class="btn1 btn-close1" onclick="closePopup()">Close</button>
+         </form>
+     </div>
+
+<!-- Login Form (Pop-up) -->
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+        </main>
+        <script src="neww.js"></script>
+        <script src="teacher.js"></script>
+        <script src="session.js"></script>
+        <footer>
+            <p>&copy; 2024 HOME LEARNING HUB</p>
+        </footer>
+    </body>
+    </html>
+</body>
+</html> 
+</body>
+</html>
